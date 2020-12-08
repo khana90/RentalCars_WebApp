@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AD and K Rental cars</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:400,700%7CPT+Serif:400,700,400italic" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat|Open+Sans" rel="stylesheet"/>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    </head>
+
+    <body >
+
+        <h4 id="Title">  AD and K Rental Cars</h4> 
+        <header>
+            <nav >
+                <ul >
+                    <li><a href="#hero" >Home</a></li>
+                    <li><a href="#about" >About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#manage booking">Manager booking</a></li>
+                    <li><a href="login.html" >Login</a></li>
+                    <li>   <img src="Akdlogo.jpg" id="logo" alt="logo">   </li>
+                </ul>
+            </nav>    
+        </header>
+
+        <form>  
+            <h5 id="heading5">   Lets Find Ideal car</h5> 
+            <div class="container">
+                <div>  Pick Up Location   <input type="text" placeholder="pick up location" name="pickup" required> 
+
+                    <div>
+                        <input type="checkbox"> Drop-off elsewhere?
+                        <input type="text" placeholder="Drop off location" class="hide">
+                    </div>             
+                    <script>
+                        $('input[type="checkbox"]').change(function () {
+                            $(this).next('.hide').toggle();
+                            if (this.checked)
+                                $(input).show();
+                            else
+                                $(input).hide();
+                        });
+                    </script>
+                    <p></p> 
+
+                    <label for="pick-up">Pick up date:</label>
+
+                    <input type="date" id="pick-up" name="trip-start"
+                           value="2021-01-01"
+                           min="2018-01-01" max="2021-12-31">
+                    <label for="pick-time">Pick up time: </label>
+                    <input id="pick-time" type="time" name="appt-time" value="13:30">
+                    <p></p>
+                        <label for="drop-off">Drop off date:</label>
+                        <input type="date" id="drop-off" name="trip-end"
+                               value="2021-01-01"
+                               min="2018-01-01" max="2021-12-31">
+                        <label for="drop-time">Drop off time: </label>
+                        <input id="drop-time" type="time" name="appt-time" value="10:30">
+
+                    <p></p>
+                    <p></p>
+                    <button type="submit">Search</button>   
+
+                </div>   
+
+            </div>
+        </form>    
+
+
+        <main> 
+            <section id="hero" >
+                <div class="section-inner">  
+                    <img src="Akdlogo.jpg" class="profile-img" alt="prfile-logo">
+                    <h1>AD and K Rental cars is London based rental company which provides</h1>
+                    <h2>Personal Cars . PCO Cars</h2>
+                </div>
+
+            </section>
+
+            <section id="about">
+                <div class="section-inner">
+
+                    <h2>About me</h2>
+                    <p>I'm a really awn some grass, do some coding and then go back to sleep.</p>
+                    <h3>Achievements</h3>
+                    <ul>
+                        <li>Bachelor of photogenic posing, 2010</li>
+                        <li>Llamaness certification from the Llama Institute, 2014</li>
+                        <li>I coded a website, 2020</li>
+                    </ul>
+                </div>
+            </section>
+            <section id="contact">
+                <div class="section-inner">
+                    <h2>Contact me</h2>
+                    <p>You can find me on:</p>
+                    <ul>
+                        <li><a href="https://twitter.com/llama">Twitter</a></li>
+                        <li><a href="https://www.reddit.com/user/llama">Reddit</a></li>
+                        <li><a href="https://www.instagram.com/llamasporfavor/">Instagram</a></li>
+                    </ul>
+                    <p>Or, you can <a href="mailto:llama@codetheweb.blog">send me an email</a>.</p>
+                </div>
+            </section>
+        </main>
+        <footer>
+            Copyright  &copy; AD&K rental cars 2020
+        </footer>
+    </body>
+</html>

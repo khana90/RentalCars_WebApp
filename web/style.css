@@ -94,7 +94,7 @@ section h3 {
     margin-left: 90px;
     text-align: center;
 }
-/*panel       00-----*/
+/* main form       00-----*/
 form {  
     height: 500px;
     width: 45%;
@@ -102,7 +102,8 @@ form {
     background-color: lightblue;  
     justify-content:flex-end;
     margin-left: 20px;
-} 
+}  
+
 
 .container {                        
     width: 100%;
@@ -144,8 +145,36 @@ button {
     border: none;   
     cursor: pointer; 
     margin-top: 100px;
-
 }   
+/* longin form----*/
+#login-form{
+    width:40%;
+    height: 400px;
+    background-color:limegreen;
+    margin-left: 20px;
+    
+}
+#login-form input[type=text],[type=password] {
+    width: 60%;
+    margin: 10px 10px;
+    padding: 15px 5px;
+    display: inline-block;
+    margin-left: 0px;
+    margin-top: 20px;
+}
+#login-form button{
+     background-color:chocolate;  
+    width: 95%;  
+    color: white;   
+    padding: 15px;   
+    margin: 20px 10px;   
+    border: none;   
+    cursor: pointer;
+    
+}
+
+
+
 .hide {
     display: none;
 }

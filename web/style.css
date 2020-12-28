@@ -3,7 +3,7 @@ body {
     margin: 5px;
     margin-top: 30px;
     font-family: sans-serif; /* Add this line */
-background-color:burlywood;
+    background-color:burlywood;
 }
 
 header {
@@ -13,31 +13,30 @@ header {
     left: 0;
     right: 0px;
     height: 90px;
-
     line-height: 80px;
     background-color: gray;
-
+ display: block;
 }
 
 header * {
-    float:start;                    /* flex-wrap: wrap;*/
+    float:start;                    
     display: inline;
     height: 90px;
-
+    
 }
 
-header ul {  /* nav heading */
-    padding: 0px;  
-
+/* nav heading */
+header ul {  
+    padding: 40px;
+    
 }
 
 header li {
     margin-left: 100px;  
     font-weight: bold;
     text-transform: uppercase;
+     
 }
-
-
 
 section{
     height: 100vh;
@@ -50,19 +49,20 @@ section{
     background-position: center center; 
     background-repeat: no-repeat; 
     background-attachment: fixed; 
-   
+
 }
 
-  #carimg {     /* background image */
+#carimg {     /* background image */
     width: 100%;
     height: 500px;
+    margin-top: 0px;
 }
 #car2img{
     width: 100%;
     height: 500px;
 }
 #car3img{
-     width: 100%;
+    width: 100%;
     height: 500px;
 }
 
@@ -93,88 +93,115 @@ section h3 {
     margin-top: 50px;
     margin-left: 90px;
     text-align: center;
+} 
+label{
+    margin: 20px 20px;
+   padding-left: 20px;
+   
 }
+
+
 /* main form       00-----*/
-form {  
+#mainform {  
     height: 500px;
-    width: 45%;
+    width: 50%;
     border: 3px solid #f1f1f1;  
     background-color: lightblue;  
     justify-content:flex-end;
-    margin-left: 20px;
-}  
-
-
-.container {                        
-    width: 100%;
-    margin-left: 20px;
-    margin: 10px 20px;
+    margin-left: 20px; 
     display: flex;
-    padding: 30px;   
-
-}
-
-input[type=text] {   
+    margin-bottom: 10px;
+    margin-top: 40px;
+    
+} 
+#mainform input[type=text] {   
     width: 100%;   
     margin: 10px 0px;  
-    padding: 12px 10px;   
+    padding: 15px 10px;   
     display: inline-block;   
     border: 2px solid green;   
     box-sizing: border-box; 
+    display: flex;
+    justify-content:flex-end;
 
+    margin-right: 20px;
 }
-label{
-    width:22px;
-    display:inline;
-}
-
-#heading5  {
-    font-size: 20px;
-    display: inline;
-    margin-left: 200px;
-    color: red;
-    text-transform: uppercase;
-}
-
-button {   
+#mainform button {   
     background-color: #4CAF50;   
     width: 100%;  
     color: orange;   
     padding: 15px;   
-    margin: 10px 10px;   
+    margin: 50px 0px;   
     border: none;   
     cursor: pointer; 
-    margin-top: 100px;
-}   
+    text-align: center;
+    display: flex;
+    justify-content:flex-end;
+} 
+
 /* longin form----*/
 #login-form{
     width:40%;
     height: 400px;
     background-color:limegreen;
-    margin-left: 20px;
-    
+    margin-left: 40px;
+    margin-top: 40px;
+    padding-left: 10px;
+
 }
 #login-form input[type=text],[type=password] {
-    width: 60%;
-    margin: 10px 10px;
+    width: 80%;
+    margin: 10px 0px;
+    padding: 15px 5px;
+    display: inline-block;
+    margin-left: 0px;
+    margin-top: 20px;
+}
+#login-form input[type=password] {
+    width: 80%;
+    margin: 10px 0px;
     padding: 15px 5px;
     display: inline-block;
     margin-left: 0px;
     margin-top: 20px;
 }
 #login-form button{
-     background-color:chocolate;  
+    background-color:chocolate;  
     width: 95%;  
     color: white;   
     padding: 15px;   
-    margin: 20px 10px;   
+    margin: 80px 10px;   
     border: none;   
-    cursor: pointer;
-    
+    cursor: pointer; 
 }
 
+/* register form----*/
+#register-form{
+    width:50%;
+    height: 400px;
+    background-color:gold;
+    margin-right: 50px;
+    margin-top: 40px;
+    padding-left: 20px;
 
-
+}
+#register-form input[type=text],[type=password] {
+    width: 80%;
+    margin: 10px 0px;
+    padding: 15px 5px;
+    display: inline-block;
+    margin-left: 0px;
+    margin-top: 15px;
+}
+#register-form button{
+    background-color:chocolate;  
+    width: 95%;  
+    color: white;   
+    padding: 15px;   
+    margin: 10px 10px;   
+    border: none;   
+    cursor: pointer; 
+}
 .hide {
     display: none;
 }
@@ -192,10 +219,10 @@ header a {
 }
 
 #contact{
- background-image: linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.75)), 
-     url('https://www.jamesedition.com/stories/cars/10-most-expensive-celebrity-cars-in-the-world-1000071/.');
+    background-image: linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.75)), 
+        url('https://www.jamesedition.com/stories/cars/10-most-expensive-celebrity-cars-in-the-world-1000071/.');
 
-  }
+}
 
 
 

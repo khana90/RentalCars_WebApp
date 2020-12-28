@@ -19,53 +19,53 @@
                     <li><a href="#about" >About</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li><a href="#manage booking">Manager booking</a></li>
-                    <li><a href="login.html" >Login</a></li>
+                    <li><a href="login.html" >Login/Registration</a></li>
 
                 </ul>
             </nav>    
         </header>
 
-        <form>  
-            <h5 id="heading5">   Lets Find Ideal car</h5> 
-            <div class="container">
-                <div>  Pick Up Location   <input type="text" placeholder="pick up location" name="pickup" required> 
-                    <div>
-                        <input type="checkbox"> Drop-off elsewhere?
-                        <input type="text" placeholder="Drop off location" class="hide">
-                    </div>             
-                    <script>
-                        $('input[type="checkbox"]').change(function () {
-                            $(this).next('.hide').toggle();
-                            if (this.checked)
-                                $(input).show();
-                            else
-                                $(input).hide();
-                        });
-                    </script>
-                    <p></p> 
+        <form id="mainform">  
+            <h3 style="text-align: center;"> lefts find </h3>
 
-                    <label for="pick-up">Pick up date:</label>
+            <div>
+              
+                
+                <div>
+                    <input type="text" placeholder="Pick up location" name="pickup" required> 
+                    <input type="checkbox"> Drop-off elsewhere?
+                    <input type="text" placeholder="Drop off location" class="hide">
+                </div>             
+                <script>
+                    $('input[type="checkbox"]').change(function () {
+                        $(this).next('.hide').toggle();
+                        if (this.checked)
+                            $(input).show();
+                        else
+                            $(input).hide();
+                    });
+                </script>
+                <p></p> 
 
-                    <input type="date" id="pick-up" name="trip-start"
-                           value="2021-01-01"
-                           min="2018-01-01" max="2021-12-31">
-                    <label for="pick-time">Pick up time: </label>
-                    <input id="pick-time" type="time" name="appt-time" value="13:30">
-                    <p></p>
-                    <label for="drop-off">Drop off date:</label>
-                    <input type="date" id="drop-off" name="trip-end"
-                           value="2021-01-01"
-                           min="2018-01-01" max="2021-12-31">
-                    <label for="drop-time">Drop off time: </label>
-                    <input id="drop-time" type="time" name="appt-time" value="10:30">
+                <label for="pick-up">Pick up date:</label>
 
-                    <p></p>
-                    <p></p>
-                    <button type="submit">Search</button>   
+                <input type="date" id="pick-up" name="trip-start"
+                       value="2021-01-01"
+                       min="2018-01-01" max="2021-12-31">
+                <label for="pick-time">Pick up time: </label>
+                <input id="pick-time" type="time" name="appt-time" value="13:30">
+                <p></p>
+                <label for="drop-off">Drop off date:</label>
+                <input type="date" id="drop-off" name="trip-end"
+                       value="2021-01-01"
+                       min="2018-01-01" max="2021-12-31">
+                <label for="drop-time">Drop off time: </label>
+                <input id="drop-time" type="time" name="appt-time" value="10:30">
 
-                </div>   
-
-            </div>
+                <p></p>
+                <p></p>
+                <button type="submit">Search</button>   
+            </div>   
         </form>    
 
 

@@ -1,41 +1,93 @@
 
 body {
-    margin: 5px;
-    margin-top: 30px;
-    font-family: sans-serif; /* Add this line */
+    margin: 0;
+ /* Add this line */
     background-color:burlywood;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: gray;
+}
+
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
+/* nav for index page */
 header {
     display: flex;
     position: fixed;
     top: 0px;
     left: 0;
     right: 0px;
-    height: 90px;
+    height: 80px;
     line-height: 80px;
     background-color: gray;
- display: block;
+    display: block;
 }
 
 header * {
     float:start;                    
     display: inline;
-    height: 90px;
-    
+    height: 50px;
 }
 
 /* nav heading */
 header ul {  
-    padding: 40px;
-    
+    padding: 0px;
+
+
 }
 
 header li {
     margin-left: 100px;  
     font-weight: bold;
     text-transform: uppercase;
-     
+
 }
 
 section{
@@ -54,7 +106,7 @@ section{
 
 #carimg {     /* background image */
     width: 100%;
-    height: 500px;
+    height: 550px;
     margin-top: 0px;
 }
 #car2img{
@@ -94,51 +146,48 @@ section h3 {
     margin-left: 90px;
     text-align: center;
 } 
-label{
-    margin: 20px 20px;
-   padding-left: 20px;
-   
-}
-
-
 /* main form       00-----*/
 #mainform {  
-    height: 500px;
-    width: 50%;
-    border: 3px solid #f1f1f1;  
+    height: 60%;
+    width: 40%;
+    border: 2px solid #f1f1f1;  
     background-color: lightblue;  
-    justify-content:flex-end;
     margin-left: 20px; 
     display: flex;
     margin-bottom: 10px;
     margin-top: 40px;
-    
+
 } 
 #mainform input[type=text] {   
     width: 100%;   
     margin: 10px 0px;  
-    padding: 15px 10px;   
+    padding: 12px 10px;   
     display: inline-block;   
     border: 2px solid green;   
     box-sizing: border-box; 
     display: flex;
     justify-content:flex-end;
-
-    margin-right: 20px;
+    margin-left: 10px;
 }
 #mainform button {   
     background-color: #4CAF50;   
     width: 100%;  
     color: orange;   
-    padding: 15px;   
-    margin: 50px 0px;   
+    padding: 12px;   
+    margin: 10px 20px;   
     border: none;   
     cursor: pointer; 
     text-align: center;
     display: flex;
-    justify-content:flex-end;
+    justify-content:center;
+    margin-left: 10px;
 } 
+#mainform label{
+    margin: 10px 0px;
+    padding-left: 10px;
+    padding-bottom: 5px;
 
+}
 /* longin form----*/
 #login-form{
     width:40%;
@@ -203,10 +252,10 @@ label{
     cursor: pointer; 
 }
 .hide {
-    display: none;
+    display: yes;
 }
 header a:hover { 
-    background-color: red; 
+    background-color: blue; 
     color: blue; 
 }
 

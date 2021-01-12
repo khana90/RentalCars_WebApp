@@ -10,7 +10,8 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     </head>
 
-    <body>
+    <body>    
+            
         <h4 id="Title">  AD and K Rental Cars</h4> 
         <header>
             <nav >
@@ -18,20 +19,17 @@
                     <li><a href="#hero" >Home</a></li>
                     <li><a href="#about" >About</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a href="#manage booking">Manager booking</a></li>
+
                     <li><a href="login.html" >Login/Registration</a></li>
 
                 </ul>
             </nav>    
         </header>
 
-        <form id="mainform">  
-            <h3 style="text-align: center;"> lefts find </h3>
-
+        <form id="mainform" action="connection.php.html" method="GET">  
             <div>
-              
-                
                 <div>
+                       <h3 style="text-align: center;"> Find Ideal Car </h3>
                     <input type="text" placeholder="Pick up location" name="pickup" required> 
                     <input type="checkbox"> Drop-off elsewhere?
                     <input type="text" placeholder="Drop off location" class="hide">
@@ -46,7 +44,7 @@
                     });
                 </script>
                 <p></p> 
-
+                <div>
                 <label for="pick-up">Pick up date:</label>
 
                 <input type="date" id="pick-up" name="trip-start"
@@ -61,11 +59,17 @@
                        min="2018-01-01" max="2021-12-31">
                 <label for="drop-time">Drop off time: </label>
                 <input id="drop-time" type="time" name="appt-time" value="10:30">
-
+                </div>
+                <p>
+                  <div>
+                    <label for="note"></label>
+                    <textarea id="note" name="note" placeholder="Leave note"></textarea>
+                </div>
                 <p></p>
-                <p></p>
-                <button type="submit">Search</button>   
+                <button type="submit">Search</button> 
+              
             </div>   
+            
         </form>    
 
 

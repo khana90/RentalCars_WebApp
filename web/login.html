@@ -7,27 +7,47 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+
+        <div class="topnav" id="myTopnav">
+            <a href="index.html" class="active">Home</a>
+            <a href="#news">Manage Booking</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              
+            </a>
+        </div>
+
+        <script>
+            function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+
         <h1 id="login-heading" style="text-align: center"> Login and Registration</h1>
 
-        <form id="login-form" style="float: left">
+        <form action="register.jsp" method="post" id="login-form" style="float: left">
             <h2 style="text-align:center;">Login</h2>
 
             <div> Username:<input type="text" placeholder="Email" id="username-login" required> 
                 <p>
-                    Password:<input type="password" placeholder="Password" id="pass-login" required> 
+                  Password:<input type="password" placeholder="Password" id="pass-login" required> 
                 <p>
                     <button type="submit" id="btn-login">Login  </button>
             </div>
         </form>
 
 
-        <form id="register-form" style="float: right">
+        <form action="register.jsp" method="post" id="register-form" style="float: right">
             <h2 style="text-align: center">Register</h2>
-            <div> Username: <input type="text" placeholder="Email" id="user-register" required>
+            <div> Username: <input type="text" name="username" placeholder="Email" id="register-username" required>
                 <p></p>
-                Password: <input type="password" placeholder="Password" id="register-pass" required>
+                Password: <input type="password" name="password" placeholder="Password" id="register-pass" required>
                 <p></p>
-                Password: <input type="password" placeholder="Repeat password" id="register-rptpass" required>
+                Password: <input type="password" name="rptpassword" placeholder="Repeat password" id="register-rptpass" required>
                 <p></p>    
                 <button type="submit" id="btn-register">Register</button>
             </div>

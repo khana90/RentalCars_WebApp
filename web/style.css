@@ -255,8 +255,8 @@ section h3 {
     display: yes;
 }
 header a:hover { 
-    background-color: blue; 
-    color: blue; 
+    background-color: white; 
+    
 }
 
 header a {

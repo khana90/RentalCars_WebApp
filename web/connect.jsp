@@ -15,30 +15,33 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
-         <h1>Login!</h1>
+
     </head>
+    
     <body>
+
         <%
-            try{
-               
-              String email = request.getParameter("username");
+            
+              String email = request.getParameter("email");
             String password = request.getParameter("password");
-                
+           String query="select email, password from register where email = '"+email+"' and password = '"+password+"'";
+            try{
+
                 Class.forName("com.mysql.jdbc.Driver");
                 Connection conn= DriverManager.getConnection("jdbc:mysql://localhost:3306/RentalCars", "root", "root");
-                PreparedStatement pst = conn.prepareStatement("select * from register where id =? ");
-                pst.setString(1, email);
-                ResultSet res= pst.executeQuery();
-               
-                if (res.next()){
-                    if(password.equals(res.getString(1))){
-                    out.println("<h1> ---Login successful------</h1>");
-                }
-                }else{
-                    out.println("User Not exist");
-                }
-            }catch (Exception e){
                 
+                PreparedStatement pst = conn.prepareStatement(query);
+                ResultSet res= pst.executeQuery();
+       
+                if(res.next()){
+                    pst.setString(1, res.getString("email"));
+                    pst.setString(2,res.getString("password"));
+                    
+                    
+                }
+                System.out.println("Login successfully");
+            }catch (Exception e){
+                System.out.println(e.getMessage());
             }
                 
             %>

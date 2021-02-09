@@ -23,6 +23,7 @@
             String password = request.getParameter("password");
             String rept_pass = request.getParameter("rptpassword");
 
+           
             try {
                 Class.forName("com.mysql.jdbc.Driver");
                 Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/RentalCars", "root", "root");
@@ -31,18 +32,17 @@
                 pst.setString(2, password);
                 pst.setString(3, rept_pass);
 
+                
+            if (password.equals(rept_pass)) {
+                out.println("Data has been inserted successfully !");
                 pst.executeUpdate();
-
+            } else {
+                out.println("Password doesn't match !");
+            }
             } catch (Exception e) {
                 out.println(e.getMessage());
             }
-            if (password.equals(rept_pass)) {
-                out.println("Data has been inserted successfully !");
-            } else {
-
-                out.println("Password doesn't match !");
-
-            }
+            
 
         %>
 

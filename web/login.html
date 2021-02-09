@@ -20,7 +20,7 @@
             function myFunction() {
                 var x = document.getElementById("myTopnav");
                 if (x.className === "topnav") {
-                    x.className += " responsive";
+                    x.className += "responsive";
                 } else {
                     x.className = "topnav";
                 }
@@ -29,7 +29,7 @@
 
         <h1 id="login-heading" style="text-align: center"> Login and Registration</h1>
 
-        <form action="register.jsp" method="post" id="login-form" style="float: left">
+        <form action="connect.jsp" method="GET" id="login-form" style="float: left">
             <h2 style="text-align:center;">Login</h2>
 
             <div> Username:<input type="text" placeholder="Email" id="username-login" required> 
@@ -39,6 +39,8 @@
                     <button type="submit" id="btn-login">Login  </button>
             </div>
         </form>
+        
+
 
 
         <form action="register.jsp" method="post" id="register-form" style="float: right">
@@ -52,5 +54,9 @@
                 <button type="submit" id="btn-register">Register</button>
             </div>
         </form>
+        
+        
+        
+        
     </body>
 </html>
